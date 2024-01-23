@@ -69,7 +69,7 @@ function BookList(props: any): React.JSX.Element {
             {sortedBooks?.map((book: Book, index: number) => {
                 return (
                     <div key={index} className={cx('d-flex justify-content-between mb-3', styles.book)}>
-                        <label className='w-25' onClick={() => openUpdateModal(book)}>{book.title}</label>
+                        <label className={cx('w-25', styles.cursorPointer)} onClick={() => openUpdateModal(book)}>{book.title}</label>
                         <label className='w-25'>{book.price?.displayValue} {book.price?.currency}</label>
                         <label className='w-25'>{book.category}</label>
                         <span className='btn btn-danger' onClick={() => removeBook(book)}>Delete</span>
